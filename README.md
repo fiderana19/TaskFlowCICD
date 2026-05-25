@@ -179,7 +179,7 @@ This avoids unnecessary PostgreSQL restarts and preserves database persistence.
 ## AWS EC2
 
 <p align="center">
-<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/provision.png?raw=true" alt="Provision" width="800"/>
+<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/terraform.png?raw=true" alt="Provision" width="800"/>
 </p>
 
 ---
