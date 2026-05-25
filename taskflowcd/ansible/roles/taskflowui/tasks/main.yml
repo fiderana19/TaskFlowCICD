@@ -1,0 +1,9 @@
+- name: Pull latest frontend image
+  shell: |
+    cd {{ app_directory }}
+    docker pull {{ frontend_image }}
+
+- name: Restart frontend service
+  shell: |
+    cd {{ app_directory }}
+    docker compose up -d {{ frontend_service_name }}

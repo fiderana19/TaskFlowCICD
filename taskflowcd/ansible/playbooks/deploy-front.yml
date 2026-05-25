@@ -1,0 +1,5 @@
+- name: Deploy TaskFlow UI
+  hosts: production
+  become: true
+  roles:
+    - taskflowui

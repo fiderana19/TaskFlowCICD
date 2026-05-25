@@ -1,0 +1,39 @@
+image: alpine:3.20
+
+# VARIABLES
+variables:
+  # TERRAFORM
+  TF_INPUT: "false"
+  TF_IN_AUTOMATION: "true"
+
+# DEFAULT
+default:
+  interruptible: true
+  retry: 1
+
+# STAGES
+stages:
+  - provision
+
+# PROVISION PROD
+provision_prod:
+  stage: provision
+
+  image:
+    name: hashicorp/terraform:1.8
+    entrypoint: [""]
+
+  before_script:
+    - apk add --no-cache bash openssh-client
+    - chmod +x scripts/provision.sh
+
+  script:
+    - ./scripts/provision.sh prod
+
+  artifacts:
+    paths:
+      - devops-key.pem
+    expire_in: 2 hours
+
+  rules:
+    - when: manual

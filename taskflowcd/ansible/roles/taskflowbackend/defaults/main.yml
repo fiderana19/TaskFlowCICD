@@ -1,0 +1,5 @@
+app_directory: /home/ec2-user/app
+
+backend_image: fiderana19/task-flow-backend:latest
+
+backend_service_name: backend

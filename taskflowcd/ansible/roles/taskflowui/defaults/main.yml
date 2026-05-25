@@ -1,0 +1,5 @@
+app_directory: /home/ec2-user/app
+
+frontend_image: fiderana19/task-flow-ui:latest
+
+frontend_service_name: frontend

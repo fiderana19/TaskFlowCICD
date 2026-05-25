@@ -1,0 +1,109 @@
+image: alpine:3.20
+
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "prod"'
+    - when: never
+
+variables:
+  APP_NAME: "taskflowbackend"
+  APP_CONTAINER_PORT: 8000
+
+  DOCKERHUB_ID: "fiderana19"
+
+  IMAGE_TAG: "v1.0"
+  IMAGE_LATEST_TAG: "latest"
+
+  DOCKER_VERSION: "24.0.7"
+  DOCKER_DIND_VERSION: "24.0.7-dind"
+
+  DOCKER_IMAGE: "docker:${DOCKER_VERSION}"
+  DOCKER_SERVICE: "docker:${DOCKER_DIND_VERSION}"
+
+  DOCKER_HOST: "tcp://docker:2375"
+  DOCKER_TLS_CERTDIR: ""
+
+default:
+  interruptible: false
+  retry: 1
+
+stages:
+  - build
+  - security
+  - release
+
+build_image:
+  stage: build
+
+  image: $DOCKER_IMAGE
+
+  services:
+    - name: $DOCKER_SERVICE
+      alias: docker
+
+  before_script:
+    - docker info
+    - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_ID" --password-stdin
+
+  script:
+    - chmod +x scripts/build.sh
+    - ./scripts/build.sh
+  
+  artifacts:
+    paths:
+      - image.tar
+    expire_in: 1 hour
+
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "prod"'
+
+scan_image_snyk:
+  stage: security
+
+  image:
+    name: snyk/snyk:docker
+    entrypoint: [""]
+
+  services:
+    - name: $DOCKER_SERVICE
+      alias: docker
+
+  before_script:
+    - snyk auth $SNYK_TOKEN
+
+  script:
+    - chmod +x scripts/scan.sh
+    - ./scripts/scan.sh
+
+  artifacts:
+    when: always
+    paths:
+      - scan_report.json
+    expire_in: 1 week
+
+  allow_failure: true
+
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "prod"'
+
+push_image:
+  stage: release
+
+  image: $DOCKER_IMAGE
+
+  dependencies:
+    - build_image
+
+  before_script:
+    - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_ID" --password-stdin
+
+  script: 
+    - chmod +x scripts/push.sh
+    - ./scripts/push.sh
+
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "prod"'
+      when: manual
