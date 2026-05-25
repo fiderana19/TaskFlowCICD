@@ -163,10 +163,12 @@ This avoids unnecessary PostgreSQL restarts and preserves database persistence.
 <p align="center">
 <img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/ui.png?raw=true" alt="Ui pipeline" width="800"/>
 </p>
+
 * Backend Pipeline
 <p align="center">
 <img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/backend.png?raw=true" alt="Backend pipeline" width="800"/>
 </p>
+
 * CD Pipeline
 <p align="center">
 <img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/cd.png?raw=true" alt="CD pipeline" width="800"/>
