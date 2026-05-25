@@ -27,7 +27,7 @@ This project demonstrates:
 # 🏗️ Global Architecture
 
 <p align="center">
-<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/archi.png?raw=true" alt="Architecture" width="800"/>
+<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/archi.jpg?raw=true" alt="Architecture" width="800"/>
 </p>
 
 ---
@@ -273,220 +273,42 @@ AWS EC2 Update
 
 ---
 
-# 📸 Screenshots To Add
-
-Tu dois absolument ajouter ces captures dans le README GitHub.
-
----
-
-# 1️⃣ Application UI
-
-## Homepage / Dashboard
-
-Capture:
-
-* login/register
-* dashboard
-* tasks CRUD
-
-Nom conseillé :
-
-```txt
-/docs/screenshots/dashboard.png
-```
-
----
-
-# 2️⃣ Docker Containers Running
-
-Commande :
-
-```bash
-docker ps
-```
-
-Capture montrant :
-
-* frontend
-* backend
-* postgres
-
----
-
-# 3️⃣ Docker Compose
-
-Commande :
-
-```bash
-docker compose ps
-```
-
----
-
-# 4️⃣ GitLab CI Pipelines
-
-Très important.
-
-Captures :
-
-* frontend pipeline success
-* backend pipeline success
-* deployment pipeline success
-
----
-
-# 5️⃣ AWS EC2 Instance
-
-Capture AWS montrant :
-
-* EC2 running
-* public IP
-* instance type
-
----
-
-# 6️⃣ Terraform Apply
-
-Commande :
-
-```bash
-terraform apply
-```
-
-Capture :
-
-* successful provisioning
-
----
-
-# 7️⃣ Ansible Deployment
-
-Commande :
-
-```bash
-ansible-playbook ...
-```
-
-Capture :
-
-* PLAY RECAP success
-
----
-
-# 8️⃣ DockerHub Images
-
-Capture :
-
-* frontend image
-* backend image
-
----
-
-# 9️⃣ Browser Network/API
-
-Capture DevTools :
-
-* successful API calls
-* `/api/auth/login`
-* `/api/tasks`
-
----
-
-# 🔟 Swagger API Docs
-
-Très important pour FastAPI.
-
-Capture :
-
-```txt
-http://PUBLIC_IP:8000/docs
-```
-
----
-
-# 📸 README Screenshot Section Example
-
-```md
-# 📸 Screenshots
+# 📸 Results
 
 ## Application Dashboard
 
 ![Dashboard](docs/screenshots/dashboard.png)
-
----
-
-## Docker Containers
-
-![Docker](docs/screenshots/docker-ps.png)
+<p align="center">
+<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/app.png?raw=true" alt="Application" width="800"/>
+</p>
 
 ---
 
 ## GitLab CI Pipeline
 
-![Pipeline](docs/screenshots/gitlab-pipeline.png)
+<p align="center">
+<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/ui.png?raw=true" alt="Ui pipeline" width="800"/>
+</p>
+
+<p align="center">
+<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/backend.png?raw=true" alt="Backend pipeline" width="800"/>
+</p>
 
 ---
 
 ## AWS EC2
 
-![EC2](docs/screenshots/ec2-instance.png)
+<p align="center">
+<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/provision.png?raw=true" alt="Provision" width="800"/>
+</p>
 
 ---
 
 ## Swagger API
 
-![Swagger](docs/screenshots/swagger.png)
-```
-
----
-
-# 🚀 Deployment Commands
-
-## Terraform
-
-```bash
-terraform init
-terraform plan
-terraform apply
-```
-
-## Docker Compose
-
-```bash
-docker compose up -d
-```
-
-## Ansible Deployment
-
-```bash
-ansible-playbook playbooks/deploy-frontend.yml
-```
-
----
-
-# 📈 What This Project Demonstrates
-
-## DevOps Skills
-
-* CI/CD pipelines
-* Infrastructure as Code
-* Configuration management
-* Container orchestration
-* Production deployments
-
-## Backend Skills
-
-* FastAPI APIs
-* Authentication
-* Database management
-* ORM usage
-
-## Frontend Skills
-
-* React architecture
-* State management
-* API integration
-* Production builds
+<p align="center">
+<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/swagger.png?raw=true" alt="Swagger" width="800"/>
+</p>
 
 ---
 
@@ -507,19 +329,3 @@ ansible-playbook playbooks/deploy-frontend.yml
 Developed by Antsa Fiderana
 
 DevOps & Fullstack Engineer Project
-
----
-
-# ⭐ Final Result
-
-This project represents a complete DevOps lifecycle from:
-
-* development
-* containerization
-* CI/CD
-* infrastructure provisioning
-* automated deployment
-* cloud hosting
-* production operations
-
-using modern industry tools and best practices.
