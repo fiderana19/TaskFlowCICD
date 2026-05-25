@@ -32,77 +32,6 @@ This project demonstrates:
 
 ---
 
-# 🧱 Tech Stack
-
-## Frontend
-
-* React
-* Vite
-* TypeScript
-* NGINX
-* Docker
-
-## Backend
-
-* FastAPI
-* SQLAlchemy
-* Alembic
-* PostgreSQL
-* JWT Authentication
-* Docker
-
-## DevOps
-
-* Docker & Docker Compose
-* GitLab CI/CD
-* Ansible
-* Terraform
-* AWS EC2
-* NGINX Reverse Proxy
-
-## Cloud & Infrastructure
-
-* AWS EC2
-* Security Groups
-* EBS Volumes
-* SSH Access
-
----
-
-# 📂 Project Structure
-
-```txt
-TASKFLOW-CICD/
-│
-├── taskflowbackend/
-│   ├── app/
-│   ├── alembic/
-│   ├── Dockerfile
-│   ├── requirements.txt
-│   └── .gitlab-ci.yml
-│
-├── taskflowui/
-│   ├── src/
-│   ├── nginx.conf
-│   ├── Dockerfile
-│   └── .gitlab-ci.yml
-│
-├── taskflowcd/
-│   ├── ansible/
-│   │   ├── inventories/
-│   │   ├── playbooks/
-│   │   └── roles/
-│   │
-│   ├── scripts/
-│   └── .gitlab-ci.yml
-│
-└── terraform/
-    ├── app/
-    └── modules/
-```
-
----
-
 # ⚙️ Features
 
 ## ✅ Frontend
@@ -130,40 +59,6 @@ TASKFLOW-CICD/
 * Infrastructure as Code
 * CI/CD pipelines
 * Modular Ansible roles
-
----
-
-# 🐳 Docker Architecture
-
-## Frontend Container
-
-```txt
-React + Vite
-↓
-Docker Multi-stage Build
-↓
-NGINX Production Container
-```
-
-## Backend Container
-
-```txt
-FastAPI
-↓
-Uvicorn
-↓
-Docker Container
-```
-
-## Production Stack
-
-```txt
-NGINX Frontend
-↓
-FastAPI Backend
-↓
-PostgreSQL
-```
 
 ---
 
@@ -253,31 +148,10 @@ This avoids unnecessary PostgreSQL restarts and preserves database persistence.
 
 ---
 
-# 🌍 Production Deployment
-
-## Deployment Flow
-
-```txt
-Developer Push
-↓
-GitLab CI
-↓
-Docker Build
-↓
-DockerHub Push
-↓
-Ansible Deployment
-↓
-AWS EC2 Update
-```
-
----
-
 # 📸 Results
 
 ## Application Dashboard
 
-![Dashboard](docs/screenshots/dashboard.png)
 <p align="center">
 <img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/app.png?raw=true" alt="Application" width="800"/>
 </p>
@@ -285,13 +159,17 @@ AWS EC2 Update
 ---
 
 ## GitLab CI Pipeline
-
+* UI Pipeline
 <p align="center">
 <img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/ui.png?raw=true" alt="Ui pipeline" width="800"/>
 </p>
-
+* Backend Pipeline
 <p align="center">
 <img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/backend.png?raw=true" alt="Backend pipeline" width="800"/>
+</p>
+* CD Pipeline
+<p align="center">
+<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/cd.png?raw=true" alt="CD pipeline" width="800"/>
 </p>
 
 ---
