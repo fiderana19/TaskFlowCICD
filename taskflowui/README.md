@@ -78,7 +78,7 @@ NGINX Production Container
 ## Login Page
 
 <p align="center">
-<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/app.jpg?raw=true" alt="Application" width="800"/>
+<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/app.png?raw=true" alt="Application" width="800"/>
 </p>
 
 ---
@@ -86,16 +86,15 @@ NGINX Production Container
 ## Dashboard
 
 <p align="center">
-<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/dashboard.jpg?raw=true" alt="App Dashboard" width="800"/>
+<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/dashboard.png?raw=true" alt="App Dashboard" width="800"/>
 </p>
 
 ---
 
 ## GitLab Pipeline
 
-
 <p align="center">
-<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/ui.jpg?raw=true" alt="Ui Pipeline" width="800"/>
+<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/ui.png?raw=true" alt="Ui Pipeline" width="800"/>
 </p>
 
 ---
