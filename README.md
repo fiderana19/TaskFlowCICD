@@ -148,6 +148,33 @@ This avoids unnecessary PostgreSQL restarts and preserves database persistence.
 
 ---
 
+# 📊 Monitoring & Observability Setup
+
+The monitoring stack is built using AWS-native services to simulate a production-grade observability environment.
+
+# 🎯 Objectives
+
+The monitoring system was implemented to:
+
+* Monitor infrastructure health
+* Detect abnormal resource usage
+* Trigger automated alerts
+* Improve infrastructure observability
+* Simulate production incident response
+
+# ☁️ Monitoring Stack
+
+## AWS Services Used
+
+* Amazon CloudWatch
+* Amazon CloudWatch Agent
+* Amazon SNS
+* EC2 Metrics
+* CloudWatch Dashboards
+* CloudWatch Alarms
+
+---
+
 # 📸 Results
 
 ## Application Dashboard
@@ -192,12 +219,19 @@ This avoids unnecessary PostgreSQL restarts and preserves database persistence.
 
 ---
 
+## CloudWatch Dashboard
+
+<p align="center">
+<img src="https://github.com/fiderana19/TaskFlowCICD/blob/main/docs/cloudwatch-dashboard.png?raw=true" alt="Dashboard" width="800"/>
+</p>
+
+---
+
 # 🎯 Future Improvements
 
 * Kubernetes deployment
 * HTTPS with Let's Encrypt
 * Load Balancer
-* Monitoring with Prometheus/Grafana
 * GitOps workflow
 * AWS RDS
 * ECS/EKS migration
