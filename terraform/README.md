@@ -131,8 +131,6 @@ Responsible for:
 
 ---
 
-# 👨‍💻 Author
+# Back to Main Readme
 
-Developed by Antsa Fiderana
-
-Infrastructure provisioning repository of the TaskFlow Fullstack DevOps Project.
+[← Return to main README](../README.md)

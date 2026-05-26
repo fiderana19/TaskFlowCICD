@@ -24,6 +24,19 @@ This project demonstrates:
 
 ---
 
+# 🏗️ Project Modules
+
+## 🚀 Application Services
+- 📦 [Frontend](./taskflowui)
+- ⚙️ [Backend](./taskflowbackend)
+
+## ☁️ Infrastructure & DevOps
+- 🐳 [CD](./taskflowcd)
+- 📊 [Monitoring & Observability](./monitoring)
+- 🏗️ [Infrastructure Provisioning](./terraform)
+
+---
+
 # 🏗️ Global Architecture
 
 <p align="center">

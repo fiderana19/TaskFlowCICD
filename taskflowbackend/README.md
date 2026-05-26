@@ -115,8 +115,6 @@ Token Validation
 
 ---
 
-# 👨‍💻 Author
+# Back to Main Readme
 
-Developed by Antsa Fiderana
-
-Backend API of the TaskFlow Fullstack DevOps Project.
+[← Return to main README](../README.md)

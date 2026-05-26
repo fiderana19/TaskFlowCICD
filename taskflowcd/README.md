@@ -128,8 +128,6 @@ Responsible for:
 
 ---
 
-# 👨‍💻 Author
+# Back to Main Readme
 
-Developed by Antsa Fiderana
-
-Continuous Deployment repository of the TaskFlow Fullstack DevOps Project.
+[← Return to main README](../README.md)

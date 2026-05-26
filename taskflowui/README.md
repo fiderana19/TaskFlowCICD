@@ -99,8 +99,6 @@ NGINX Production Container
 
 ---
 
-# 👨‍💻 Author
+# Back to Main Readme
 
-Developed by Antsa Fiderana
-
-Frontend application of the TaskFlow Fullstack DevOps Project.
+[← Return to main README](../README.md)
